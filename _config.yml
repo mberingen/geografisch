@@ -10,11 +10,11 @@ prose:
   rooturl: "_posts"
   metadata: 
     _posts/articles: |
-      published: false
+      published: true
       layout: article
-      title: Your Post Title
+      title: Prose test
       abstract: Short summary of your article.
-      author_twitter: johndoe
-      author: John Doe
+      author_twitter: geo_grafisch
+      author: Marc Beringen
       categories:
       - articles
