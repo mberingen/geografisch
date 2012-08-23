@@ -33,7 +33,3 @@ Once your site is up you can start managing it with [Prose](http://prose.io). Fo
 
 ![](http://prose.io/images/screenshots/edit.png)
 
-# Test whether site.baseurl {{site.baseurl}} is the same as baseurl {{baseurl}}
-
-
-
