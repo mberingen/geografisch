@@ -1,10 +1,23 @@
 auto: true
 server: true
 permalink: none
-baseurl: "/geografisch"
+baseurl: ""
 exclude:
 - .gitignore
 - README.md
+
+navigation:
+- text: Home
+  url: /index.html
+- text: Portfolio
+  url: /portfolio/
+- text: About
+  url: /about/
+- text: Blog
+  url: /blog/
+- text: Contact
+  url: /contact/
+
 
 prose:
   rooturl: "_posts"

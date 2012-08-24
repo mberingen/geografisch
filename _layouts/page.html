@@ -1,0 +1,15 @@
+---
+layout: default
+---
+{% for page in site.categories limit:40 offset:0 %}
+    <a class="page-link" href="{{site.baseurl}}{{page.url}}" title="{{page.title}}">
+      {{ page.title }}
+    </a>
+  {% endfor %}
+
+
+<div class="article-wrapper">
+  <div class="help post-content">
+    {{ content }}
+  </div>
+</div>

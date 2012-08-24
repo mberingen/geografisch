@@ -4,7 +4,7 @@
 <html>
 <head>
   <meta charset='UTF-8'/>
-  <title>Poole &middot; Serving Jekyll faithfully</title>
+  <title>Geo-Grafisch &middot; yeah!</title>
   <link rel='shortcut icon' href='{{site.baseurl}}/images/favicon.ico' type='image/x-icon' />
   <link rel='stylesheet' href='{{site.baseurl}}/fonts/open-sans.css'>
   <link rel='stylesheet' href='{{site.baseurl}}/app.css'>
@@ -12,13 +12,33 @@
 <body>
   <div id='container'>
 
-    <div id="header">
-      <div class="navigation">
-        <a href="{{site.baseurl}}" class="title">Prose Bootstrap</a>
-      </div>
-    </div>
+    <header>
+      <nav>
+        <ul class="nav-list">
+          {% for link in site.navigation %}
+            {% assign current = nil %}
+            {% if page.url == link.url %}
+              {% assign current = 'current' %}
+            {% endif %}
 
-    <div id='main'>{{content}}</div>
+            <li class="nav-list-item{% if forloop.first %}first{% endif %} {{ current }} {% if forloop.last %}nav-list-item-last{% endif %}">
+              <a class="{{ current }}" href="{{ link.url }}">{{ link.text }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </header>
+
+    <div id='main'>
+      <div class="intro">
+        <div class="title" markdown="1">
+          <h1>{{page.title}}</h1>
+        </div>
+      </div>
+
+      {{content}}
+
+    </div>
   </div>
 
   <div id='footer'>
@@ -26,6 +46,5 @@
       Made by <a href="http://developmentseed.org">Development Seed</a>, Source Code on <a href="http://github.com/prose/bootstrap">GitHub</a>
     </div>
   </div>
-<a href="https://github.com/prose/bootstrap"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
 </body>
 </html>
