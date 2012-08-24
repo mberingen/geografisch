@@ -1,7 +1,7 @@
 auto: true
 server: true
 permalink: none
-baseurl: ""
+baseurl: "/geografisch"
 exclude:
 - .gitignore
 - README.md
