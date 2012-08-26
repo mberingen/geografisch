@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Home
+link: /index.html
 ---
 
 <div class="article-wrapper">

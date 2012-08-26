@@ -8,6 +8,7 @@
   <link rel='shortcut icon' href='{{site.baseurl}}/images/favicon.ico' type='image/x-icon' />
   <link rel='stylesheet' href='{{site.baseurl}}/fonts/open-sans.css'>
   <link rel='stylesheet' href='{{site.baseurl}}/app.css'>
+  {% if page.extrajs %}<script src={{page.extrajs}} type="text/javascript"></script>{% endif %}
 </head>
 <body>
   <div id='container'>
@@ -17,7 +18,7 @@
         <ul class="nav-list">
           {% for link in site.navigation %}
             {% assign current = nil %}
-            {% if page.url == link.url %}
+            {% if page.link == link.url %}
               {% assign current = 'current' %}
             {% endif %}
 

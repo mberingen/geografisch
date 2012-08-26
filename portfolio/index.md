@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Portfolio
+link: /portfolio/
 categories:
 - pages
 ---
