@@ -1,4 +1,4 @@
-Poole Bootstrap
+Jekyll / Poole / Twitter / Sass bootstrap framework libraries test
 =================
 
-A minimal template to get started with Jekyll and Poole.
+Just a test
