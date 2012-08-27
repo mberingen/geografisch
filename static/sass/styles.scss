@@ -1,0 +1,35 @@
+@import "lib/variables"; // Modify this for custom colors, font-sizes, etc
+@import "lib/mixins";
+
+// CSS Reset
+@import "lib/reset";
+
+// Grid system and page structure
+@import "lib/scaffolding";
+@import "lib/grid";
+@import "lib/layouts";
+
+body {
+    background: url(../img/background.jpg) repeat top left;
+}
+
+html, body {
+    height: 100%;
+}
+
+#main-menu {
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul li {
+        list-style-type: none;
+    }
+}
+
+#logo {
+    height: 310px;
+    background: url(../img/logo.png) top left no-repeat;
+}
+
