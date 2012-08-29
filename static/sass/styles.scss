@@ -22,7 +22,7 @@ html, body {
     float: none;
 
     ul { margin: 0; padding: 0; }
-    ul li { list-style-type: none; text-align: center; height: 45px; }
+    ul li { list-style-type: none; text-align: center; height: 45px; margin-left: 0; width: 25%; }
     li a { display: block; height: 35px; width: 100%; }
 }
 
@@ -36,10 +36,22 @@ html, body {
     text-decoration: underline;
 }
 
-#home a { background: url(../img/menu/home.png) top center no-repeat; }
-#portfolio a { background: url(../img/menu/portfolio.png) top center no-repeat; }
-#blog a { background: url(../img/menu/blog.png) top center no-repeat; }
-#contact a { background: url(../img/menu/contact.png) top center no-repeat; }
+#home {
+    background: url(../img/menu/icon_home.png) no-repeat 40px 0;
+    a { background: url(../img/menu/home.png) top center no-repeat; }
+}
+#portfolio {
+    background: url(../img/menu/icon_portfolio.png) no-repeat 4px 0;
+    a { background: url(../img/menu/portfolio.png) top center no-repeat; }
+}
+#blog {
+    background: url(../img/menu/icon_blog.png) no-repeat 42px 0;
+    a { background: url(../img/menu/blog.png) top center no-repeat; }
+}
+#contact {
+    background: url(../img/menu/icon_contact.png) no-repeat 16px 0;
+    a { background: url(../img/menu/contact.png) top center no-repeat; }
+}
 
 #home a span, #portfolio a span, #blog a span, #contact a span {
     position: absolute; top: -999em;
