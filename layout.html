@@ -33,19 +33,26 @@
             <div class="span6">image</div>
             <div id="logo" class="span6"></div>
         </div>
+
+        <hr>
+
         <nav id="main-menu" class="row">
             <ul>
                 {% for link in site.navigation %}
                 <li  id="{{ link.text | downcase }}" class="span3{% if forloop.first %} first{% endif %}{% if page.url == link.url %} active{% endif %}{% if forloop.last %} last{% endif %}">
-                    <a class="{{ active }}" href="{{site.baseurl}}{{ link.url }}">{{ link.text }}</a>
+                    <a class="{{ active }}" href="{{site.baseurl}}{{ link.url }}"><span>{{ link.text }}</span></a>
                 </li>
                 {% endfor %}
             </ul>
         </nav>
+
+        <hr>
+
     </header>
 
     <div id="main">
-
+        <h1>Home</h1>
+        <p>&nbsp;</p>
     </div>
 
     <footer>
