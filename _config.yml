@@ -11,11 +11,11 @@ navigation:
 - text: Home
   url: /index.html
 - text: Portfolio
-  url: /portfolio/
+  url: /portfolio.html
 - text: Blog
-  url: /blog/
+  url: /blog.html
 - text: Contact
-  url: /contact/
+  url: /contact.html
 
 
 prose:

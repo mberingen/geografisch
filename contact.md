@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Contact
-link: /contact/
 categories:
 - pages
 ---

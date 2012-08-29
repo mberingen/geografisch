@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Blog
-link: /blog/
 ---
 
 <div class="article-navigation">

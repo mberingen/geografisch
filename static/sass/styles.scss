@@ -25,11 +25,17 @@ html, body {
 
     ul li {
         list-style-type: none;
+        text-align: center;
+        height: 45px;
     }
 }
 
 #logo {
     height: 310px;
     background: url(../img/logo.png) top left no-repeat;
+}
+
+.active {
+    text-decoration: underline;
 }
 

@@ -18,7 +18,7 @@
       <nav>
         <ul class="nav-list">
           {% for link in site.navigation %}
-            <li class="nav-list-item{% if forloop.first %} first{% endif %}{% if page.link == link.url %} active{% endif %}{% if forloop.last %} last{% endif %}">
+            <li  id="{{ link.text | downcase }}" class="nav-list-item{% if forloop.first %} first{% endif %}{% if page.url == link.url %} active{% endif %}{% if forloop.last %} last{% endif %}">
                 <a class="{{ active }}" href="{{site.baseurl}}{{ link.url }}">{{ link.text }}</a>
             </li>
           {% endfor %}
