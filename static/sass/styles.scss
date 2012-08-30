@@ -9,8 +9,10 @@
 @import "lib/grid";
 @import "lib/layouts";
 
+
 body {
     background: url(../img/background.jpg) repeat top left;
+    color: white; font-size: 110%; font-family: 'Lato', sans-serif, 'Helvetica Neue', Arial, Helvetica, sans-serif; font-weight: lighter; line-height: 120%;
 }
 
 html, body {
@@ -26,8 +28,11 @@ html, body {
     li a { display: block; height: 35px; width: 100%; }
 }
 
-#logo {
+#logo, #header-map {
     height: 330px;
+}
+
+#logo {
     background: url(../img/logo.png) bottom left no-repeat;
     margin-bottom: 10px;
 }

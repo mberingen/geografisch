@@ -5,11 +5,16 @@ title: Blog
 
 <div class="article-navigation">
   {% for item in site.categories.articles limit:40 offset:0 %}
-    <a class="article-link" href="{{site.baseurl}}{{item.url}}" title="{{item.title}}">
-      
-    </a>
+    <ul>
+        <li>
+            <a class="article-link" href="{{site.baseurl}}{{item.url}}" title="{{item.title}}">{{item.title}}</a>
+        </li>
+        <p>{{ item.abstract }}</p>
+    </ul>
   {% endfor %}
 </div>
+
+{% comment %}
 
 {% for item in site.categories.articles limit:1 offset:0 %}
   <div class="intro">
@@ -25,3 +30,4 @@ title: Blog
   </div>
 {% endfor %}
 
+{% endcomment %}
