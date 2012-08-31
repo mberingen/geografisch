@@ -16,18 +16,18 @@ title: Blog
 
 {% comment %}
 
-{% for item in site.categories.articles limit:1 offset:0 %}
-  <div class="intro">
-    <div class="title">{{item.title}}</div>
-    <div class="abstract">{{item.abstract}}</div>
-    <div class="meta"> Posted by <a href="http://twitter.com/{{item.author_twitter}}">{{item.author}}</a> on {{ item.date | date: "%B %d, %Y" }} </div>
-  </div>
-
-  <div class="article-wrapper">
-    <div class="help post-content">
-      {{ item.content }}
+  {% for item in site.categories.articles limit:1 offset:0 %}
+    <div class="intro">
+      <div class="title">{{item.title}}</div>
+      <div class="abstract">{{item.abstract}}</div>
+      <div class="meta"> Posted by <a href="http://twitter.com/{{item.author_twitter}}">{{item.author}}</a> on {{ item.date | date: "%B %d, %Y" }} </div>
     </div>
-  </div>
-{% endfor %}
+
+    <div class="article-wrapper">
+      <div class="help post-content">
+        {{ item.content }}
+      </div>
+    </div>
+  {% endfor %}
 
 {% endcomment %}
