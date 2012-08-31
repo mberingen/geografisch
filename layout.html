@@ -19,54 +19,99 @@
     <link rel='stylesheet' href='{{site.staticurl}}/css/styles.css'>
     {% if page.extrajs %}<script src={{page.extrajs}} type="text/javascript"></script>{% endif %}
 
-    <script src="{{site.staticurl}}/js/vendor/modernizr-2.6.1.min.js"></script>
 </head>
 <body>
 <!--[if lt IE 7]>
 <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
 <![endif]-->
 
-<div class='container'>
-
     <header>
-        <div class="row">
-            <div class="span6">image</div>
-            <div id="logo" class="span6"></div>
+        <div class="container">
+            <div class="row">
+                <div id="header-map" class="span6">image</div>
+                <div id="logo" class="span6"></div>
+            </div>
         </div>
+    </header>
 
-        <hr>
+    <hr>
 
-        <nav id="main-menu" class="row">
+    <nav id="main-menu" class="row">
+        <div class="container">
             <ul>
                 {% for link in site.navigation %}
-                <li  id="{{ link.text | downcase }}" class="span3{% if forloop.first %} first{% endif %}{% if page.url == link.url %} active{% endif %}{% if forloop.last %} last{% endif %}">
+                <li class="{{ link.text | downcase }} span3{% if forloop.first %} first{% endif %}{% if page.url == link.url %} active{% endif %}{% if forloop.last %} last{% endif %}">
                     <a class="{{ active }}" href="{{site.baseurl}}{{ link.url }}"><span>{{ link.text }}</span></a>
                 </li>
                 {% endfor %}
             </ul>
-        </nav>
+        </div>
+    </nav>
 
-        <hr>
-
-    </header>
+    <hr>
 
     <div id="main">
-        <h1>Home</h1>
-        <p>&nbsp;</p>
+        
+        <div id="home"  data-stellar-background-ratio="0.5">
+            <div class="container">
+                <h1>Home</h1>
+                <p>Excepteur inventore quod do maecenas laoreet posuere maiores? Vero iusto saepe adipiscing nostra netus ornare, mus quas, corporis enim! Consectetuer maxime sodales, laboriosam nascetur natus quaerat? Possimus quas, cupiditate commodi! A nostra a fuga, doloremque nihil. Voluptatum deleniti veritatis repellat, necessitatibus laborum, mattis hic recusandae conubia integer enim, rutrum earum.</p>
+                <p>Pariatur dolor? Do mauris magnis ad nisl quisque? Vitae euismod, aliquip fugit, facere saepe magnam sagittis class habitasse, urna expedita natus id egestas nostra? Cum aptent, totam, repellat, voluptatibus per repellendus risus fames tincidunt phasellus sapiente? Vestibulum nullam odio elementum. Dolores minus cursus magnam arcu ipsa aut leo ultrices platea.</p>
+                <p>Sint vestibulum laboriosam ad asperiores, molestias modi sequi nibh. Accusantium, eius luctus arcu justo, aliquip temporibus, blandit consectetur habitant nostrud condimentum officia vitae delectus, pharetra animi dignissim eveniet numquam condimentum! Quam ligula corporis accumsan inceptos, dis, nonummy felis id, exercitation sit accusantium platea volutpat, taciti curae rem non! Ac commodi.</p>
+                <p>Faucibus parturient repellat exercitationem aptent egestas, quos ipsa! Quod dis litora lectus erat ipsum reprehenderit habitant! Exercitationem ducimus, soluta iste alias quasi ratione alias! Rerum facere vel laborum sociosqu convallis! Ullam, cupiditate, similique culpa, fringilla accusantium? Morbi rerum cum sapiente? Ea veniam, sem debitis veritatis facilis, velit quia, eum hic.</p>
+            </div>
+        </div>
+
+        <div id="portfolio"  data-stellar-background-ratio="0.5">
+            <div class="container">
+                <h1>Portfolio</h1>
+                <p>Excepteur inventore quod do maecenas laoreet posuere maiores? Vero iusto saepe adipiscing nostra netus ornare, mus quas, corporis enim! Consectetuer maxime sodales, laboriosam nascetur natus quaerat? Possimus quas, cupiditate commodi! A nostra a fuga, doloremque nihil. Voluptatum deleniti veritatis repellat, necessitatibus laborum, mattis hic recusandae conubia integer enim, rutrum earum.</p>
+                <p>Pariatur dolor? Do mauris magnis ad nisl quisque? Vitae euismod, aliquip fugit, facere saepe magnam sagittis class habitasse, urna expedita natus id egestas nostra? Cum aptent, totam, repellat, voluptatibus per repellendus risus fames tincidunt phasellus sapiente? Vestibulum nullam odio elementum. Dolores minus cursus magnam arcu ipsa aut leo ultrices platea.</p>
+                <p>Sint vestibulum laboriosam ad asperiores, molestias modi sequi nibh. Accusantium, eius luctus arcu justo, aliquip temporibus, blandit consectetur habitant nostrud condimentum officia vitae delectus, pharetra animi dignissim eveniet numquam condimentum! Quam ligula corporis accumsan inceptos, dis, nonummy felis id, exercitation sit accusantium platea volutpat, taciti curae rem non! Ac commodi.</p>
+                <p>Faucibus parturient repellat exercitationem aptent egestas, quos ipsa! Quod dis litora lectus erat ipsum reprehenderit habitant! Exercitationem ducimus, soluta iste alias quasi ratione alias! Rerum facere vel laborum sociosqu convallis! Ullam, cupiditate, similique culpa, fringilla accusantium? Morbi rerum cum sapiente? Ea veniam, sem debitis veritatis facilis, velit quia, eum hic.</p>
+            </div>
+        </div>
+
+        <div id="blog"  data-stellar-background-ratio="0.5">
+            <div class="container">
+                <h1>Blog</h1>
+                <p>Excepteur inventore quod do maecenas laoreet posuere maiores? Vero iusto saepe adipiscing nostra netus ornare, mus quas, corporis enim! Consectetuer maxime sodales, laboriosam nascetur natus quaerat? Possimus quas, cupiditate commodi! A nostra a fuga, doloremque nihil. Voluptatum deleniti veritatis repellat, necessitatibus laborum, mattis hic recusandae conubia integer enim, rutrum earum.</p>
+                <p>Pariatur dolor? Do mauris magnis ad nisl quisque? Vitae euismod, aliquip fugit, facere saepe magnam sagittis class habitasse, urna expedita natus id egestas nostra? Cum aptent, totam, repellat, voluptatibus per repellendus risus fames tincidunt phasellus sapiente? Vestibulum nullam odio elementum. Dolores minus cursus magnam arcu ipsa aut leo ultrices platea.</p>
+                <p>Sint vestibulum laboriosam ad asperiores, molestias modi sequi nibh. Accusantium, eius luctus arcu justo, aliquip temporibus, blandit consectetur habitant nostrud condimentum officia vitae delectus, pharetra animi dignissim eveniet numquam condimentum! Quam ligula corporis accumsan inceptos, dis, nonummy felis id, exercitation sit accusantium platea volutpat, taciti curae rem non! Ac commodi.</p>
+                <p>Faucibus parturient repellat exercitationem aptent egestas, quos ipsa! Quod dis litora lectus erat ipsum reprehenderit habitant! Exercitationem ducimus, soluta iste alias quasi ratione alias! Rerum facere vel laborum sociosqu convallis! Ullam, cupiditate, similique culpa, fringilla accusantium? Morbi rerum cum sapiente? Ea veniam, sem debitis veritatis facilis, velit quia, eum hic.</p>
+            </div>
+        </div>
+
+        <div id="contact" data-stellar-background-ratio="0.5">
+            <div class="container">
+                <h1>Contact</h1>
+                <p>Excepteur inventore quod do maecenas laoreet posuere maiores? Vero iusto saepe adipiscing nostra netus ornare, mus quas, corporis enim! Consectetuer maxime sodales, laboriosam nascetur natus quaerat? Possimus quas, cupiditate commodi! A nostra a fuga, doloremque nihil. Voluptatum deleniti veritatis repellat, necessitatibus laborum, mattis hic recusandae conubia integer enim, rutrum earum.</p>
+                <p>Pariatur dolor? Do mauris magnis ad nisl quisque? Vitae euismod, aliquip fugit, facere saepe magnam sagittis class habitasse, urna expedita natus id egestas nostra? Cum aptent, totam, repellat, voluptatibus per repellendus risus fames tincidunt phasellus sapiente? Vestibulum nullam odio elementum. Dolores minus cursus magnam arcu ipsa aut leo ultrices platea.</p>
+                <p>Sint vestibulum laboriosam ad asperiores, molestias modi sequi nibh. Accusantium, eius luctus arcu justo, aliquip temporibus, blandit consectetur habitant nostrud condimentum officia vitae delectus, pharetra animi dignissim eveniet numquam condimentum! Quam ligula corporis accumsan inceptos, dis, nonummy felis id, exercitation sit accusantium platea volutpat, taciti curae rem non! Ac commodi.</p>
+                <p>Faucibus parturient repellat exercitationem aptent egestas, quos ipsa! Quod dis litora lectus erat ipsum reprehenderit habitant! Exercitationem ducimus, soluta iste alias quasi ratione alias! Rerum facere vel laborum sociosqu convallis! Ullam, cupiditate, similique culpa, fringilla accusantium? Morbi rerum cum sapiente? Ea veniam, sem debitis veritatis facilis, velit quia, eum hic.</p>
+            </div>
+        </div>
     </div>
 
     <footer>
 
     </footer>
 
-</div>
-
 
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="{{site.staticurl}}/js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
+<script src="{{site.staticurl}}/js/vendor/modernizr-2.6.1.min.js"></script>
+<script src="{{site.staticurl}}/js/vendor/jquery.stellar.js"></script>
 <script src="{{site.staticurl}}/js/plugins.js"></script>
 <script src="{{site.staticurl}}/js/main.js"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $.stellar();
+        });
+    </script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>

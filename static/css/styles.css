@@ -394,6 +394,13 @@ body {
 html, body {
   height: 100%; }
 
+h1 {
+  font-size: 2em;
+  font-weight: lighter;
+  line-height: 120%;
+  margin: 0;
+  padding: 0; }
+
 #main-menu {
   padding: 10px 0 3px 0;
   float: none; }
@@ -421,31 +428,31 @@ html, body {
 .active {
   text-decoration: underline; }
 
-#home {
+.home {
   background: url(../img/menu/icon_home.png) no-repeat 40px 0; }
-  #home a {
+  .home a {
     background: url(../img/menu/home.png) top center no-repeat; }
 
-#portfolio {
+.portfolio {
   background: url(../img/menu/icon_portfolio.png) no-repeat 4px 0; }
-  #portfolio a {
+  .portfolio a {
     background: url(../img/menu/portfolio.png) top center no-repeat; }
 
-#blog {
+.blog {
   background: url(../img/menu/icon_blog.png) no-repeat 42px 0; }
-  #blog a {
+  .blog a {
     background: url(../img/menu/blog.png) top center no-repeat; }
 
-#contact {
+.contact {
   background: url(../img/menu/icon_contact.png) no-repeat 16px 0; }
-  #contact a {
+  .contact a {
     background: url(../img/menu/contact.png) top center no-repeat; }
 
-#home a span, #portfolio a span, #blog a span, #contact a span {
+.home a span, .portfolio a span, .blog a span, .contact a span {
   position: absolute;
   top: -999em; }
 
-#home a:hover, #portfolio a:hover, #blog a:hover, #contact a:hover {
+.home a:hover, .portfolio a:hover, .blog a:hover, .contact a:hover {
   background-position: center -35px; }
 
 hr {
@@ -454,3 +461,26 @@ hr {
   height: 5px;
   margin: 0;
   clear: both; }
+
+#home, #portfolio, #blog, #contact {
+  overflow: auto;
+  padding: 20px 0; }
+
+#home {
+  background-color: #333745;
+  background: url(../img/backgrounds/cubes.png) top left repeat;
+  color: #3E3E3E; }
+
+#portfolio {
+  background-color: #77C4D3;
+  background: url(../img/backgrounds/carbon_fibre_trans.png) top left repeat; }
+
+#blog {
+  background-color: #DAEDE2;
+  background: url(../img/backgrounds/rainbow.jpg) top left no-repeat;
+  background-size: 100%; }
+
+#contact {
+  background-color: #EA2E49;
+  background: url(../img/backgrounds/light_wool.png) top left repeat;
+  color: #3E3E3E; }
