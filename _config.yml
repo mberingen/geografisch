@@ -19,7 +19,7 @@ navigation:
 
 
 prose:
-  rooturl: ""
+  rooturl: "_posts"
   metadata: 
     _posts/articles: |
       published: true
