@@ -418,12 +418,35 @@ h1 {
     height: 35px;
     width: 100%; }
 
+nav {
+  width: 100%;
+  background: url(../img/background.jpg) repeat top left;
+  margin-left: 0;
+  position: absolute;
+  z-index: 999; }
+
+nav.fixed {
+  position: fixed;
+  top: 0;
+  margin-left: 0;
+  margin-right: 0; }
+
 #logo, #header-map {
-  height: 330px; }
+  height: 330px;
+  background-repeat: no-repeat;
+  background-position-x: 0 !important;
+  background-position-y: 0px; }
 
 #logo {
-  background: url(../img/logo.png) bottom left no-repeat;
-  margin-bottom: 10px; }
+  background-image: url(../img/logo.png);
+  background-position-y: -25px; }
+
+#header-map {
+  background-image: url(../img/map2.jpg); }
+
+#main {
+  top: 66px;
+  position: relative; }
 
 .active {
   text-decoration: underline; }
