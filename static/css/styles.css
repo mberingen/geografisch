@@ -507,3 +507,16 @@ hr {
   background-color: #EA2E49;
   background: url(../img/backgrounds/light_wool.png) top left repeat;
   color: #3E3E3E; }
+
+#map {
+  height: 340px; }
+
+#logo, #header-map {
+  background-position: 0 !important;
+  background-position-y: 0 !important;
+  position: absolute;
+  top: 30px;
+  left: 50%; }
+
+#header-map {
+  background: none; }
