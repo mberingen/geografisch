@@ -1,0 +1,105 @@
+@import "lib/variables"; // Modify this for custom colors, font-sizes, etc
+@import "lib/mixins";
+
+// CSS Reset
+@import "lib/reset";
+
+@import "bourbon/bourbon";
+@import "neat/neat";
+
+body {
+    background-color: #E7E7E7;
+}
+
+section {
+    position: relative;
+    overflow: auto;
+    padding-top: 75px;
+    background: url(../img/divider.png) bottom center no-repeat;
+}
+
+#intro {
+    min-height: 330px;
+    background-color: #008CC2;
+    padding: 0;
+    background-image: none;
+}
+
+.container {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 0 0 50px 0;
+}
+
+nav#main-menu {
+    position: absolute;
+    z-index: 999;
+    min-width: 100%;
+    background: transparent url(http://d1045bjs8msx9s.cloudfront.net/assets/bg_menu-f5033ec90b77306032a06be0c7ce4aea.png) repeat-x;
+
+    .container {
+        text-align: center; padding: 0; margin: 0 auto;
+    }
+
+    ul {
+        padding: 0;
+        text-align: center;
+        display: inline-block;
+        margin: 0 auto;
+        height: 35px;
+        @include border-radius(3px);
+        
+    }
+
+    li {
+        float: left;
+    }
+
+    li.active {
+        background-color: #17809B;
+    }
+
+    a {
+        font-size: 18px;
+        border: 0;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: white;
+        padding: 5px 45px 0;
+        height: 35px;
+        display: block;
+        background: rgba(255, 255, 255, 0.01);
+        @include transition(all .3s ease);
+        -webkit-font-smoothing: antialiased;
+    }
+
+    a:hover {
+        background: #333;
+    }
+}
+
+nav#main-menu.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+
+.thumbnails {
+    @include clearfix;
+    
+    li {
+        float: left;
+        list-style: none;
+        margin: 25px;
+        padding: 2px;
+        border: 1px solid #AAA;
+        @include border-radius(3px);
+    }
+
+    li:hover {
+        border: 1px solid #0B8CB8;
+        @include box-shadow(0 0 6px 1px rgba(11, 140, 184, 0.65));
+        @include transition(all .5s ease);
+    }
+}

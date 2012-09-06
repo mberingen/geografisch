@@ -9,13 +9,13 @@ exclude:
 
 navigation:
 - text: Home
-  url: /index.html
+  url: home
 - text: Portfolio
-  url: /portfolio.html
+  url: portfolio
 - text: Blog
-  url: /blog.html
+  url: blog
 - text: Contact
-  url: /contact.html
+  url: contact
 
 
 prose:
