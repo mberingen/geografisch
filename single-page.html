@@ -73,6 +73,17 @@
     <section id="blog">
         <div class="container">
             <h1>Blog</h1>
+
+            <div class="article-navigation">
+                {% for item in site.categories.articles limit:40 offset:0 %}
+                <ul>
+                    <li>
+                        <a class="article-link" href="{{site.baseurl}}{{item.url}}" title="{{item.title}}">{{item.title}}</a>
+                    </li>
+                    <p>{{ item.abstract }}</p>
+                </ul>
+                {% endfor %}
+            </div>
             <p>Excepteur inventore quod do maecenas laoreet posuere maiores? Vero iusto saepe adipiscing nostra netus ornare, mus quas, corporis enim! Consectetuer maxime sodales, laboriosam nascetur natus quaerat? Possimus quas, cupiditate commodi! A nostra a fuga, doloremque nihil. Voluptatum deleniti veritatis repellat, necessitatibus laborum, mattis hic recusandae conubia integer enim, rutrum earum.</p>
             <p>Pariatur dolor? Do mauris magnis ad nisl quisque? Vitae euismod, aliquip fugit, facere saepe magnam sagittis class habitasse, urna expedita natus id egestas nostra? Cum aptent, totam, repellat, voluptatibus per repellendus risus fames tincidunt phasellus sapiente? Vestibulum nullam odio elementum. Dolores minus cursus magnam arcu ipsa aut leo ultrices platea.</p>
             <p>Sint vestibulum laboriosam ad asperiores, molestias modi sequi nibh. Accusantium, eius luctus arcu justo, aliquip temporibus, blandit consectetur habitant nostrud condimentum officia vitae delectus, pharetra animi dignissim eveniet numquam condimentum! Quam ligula corporis accumsan inceptos, dis, nonummy felis id, exercitation sit accusantium platea volutpat, taciti curae rem non! Ac commodi.</p>
