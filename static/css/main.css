@@ -121,9 +121,19 @@ section {
   background-image: none; }
 
 .container {
-  max-width: 940px;
+  zoom: 1;
+  max-width: 75.99879em;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  width: 940px;
   margin: 0 auto;
   padding: 0 0 50px 0; }
+  .container:before, .container:after {
+    content: "";
+    display: table; }
+  .container:after {
+    clear: both; }
 
 nav#main-menu {
   position: absolute;
@@ -200,3 +210,17 @@ nav#main-menu.fixed {
   .thumbnails p {
     margin-left: 10px;
     float: left; }
+
+footer li {
+  list-style-type: none;
+  display: inline-block;
+  vertical-align: baseline;
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  margin-right: 0;
+  text-align: center; }
+  footer li:last-child {
+    margin-right: 0; }

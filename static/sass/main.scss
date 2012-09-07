@@ -7,6 +7,8 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
 
+$container-width: 940px;
+
 body {
     background-color: #E7E7E7;
 }
@@ -26,7 +28,8 @@ section {
 }
 
 .container {
-    max-width: 940px;
+    @include outer-container;
+    width: $container-width;
     margin: 0 auto;
     padding: 0 0 50px 0;
 }
@@ -111,5 +114,15 @@ nav#main-menu.fixed {
     p {
         margin-left: 10px;
         float: left;
+    }
+}
+
+
+footer {
+    li {
+        list-style-type: none;
+        @include span-columns(3, inline-block);
+        @include omega;
+        text-align: center;
     }
 }
