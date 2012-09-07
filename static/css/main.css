@@ -129,7 +129,7 @@ nav#main-menu {
   position: absolute;
   z-index: 999;
   min-width: 100%;
-  background: transparent url(http://d1045bjs8msx9s.cloudfront.net/assets/bg_menu-f5033ec90b77306032a06be0c7ce4aea.png) repeat-x; }
+  background: transparent url(../img/backgrounds/menu_background_temp.png) repeat-x; }
   nav#main-menu .container {
     text-align: center;
     padding: 0;
@@ -181,11 +181,14 @@ nav#main-menu.fixed {
     float: left;
     list-style: none;
     margin: 25px;
+    width: 43%; }
+  .thumbnails img {
     padding: 2px;
     border: 1px solid #AAA;
     -webkit-border-radius: 3px;
-    border-radius: 3px; }
-  .thumbnails li:hover {
+    border-radius: 3px;
+    float: left; }
+  .thumbnails img:hover {
     border: 1px solid #0B8CB8;
     -webkit-box-shadow: 0 0 6px 1px rgba(11, 140, 184, 0.65);
     box-shadow: 0 0 6px 1px rgba(11, 140, 184, 0.65);
@@ -194,3 +197,6 @@ nav#main-menu.fixed {
     -ms-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease; }
+  .thumbnails p {
+    margin-left: 10px;
+    float: left; }
