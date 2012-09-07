@@ -1,8 +1,8 @@
 ---
 published: true
 layout: article
-title: Test
-abstract: Dit is een test artikeltje.
+title: Twitter Bootstrap
+abstract: Using twitter bootstrap
 author_twitter: geo_grafisch
 author: Marc Beringen
 categories:
