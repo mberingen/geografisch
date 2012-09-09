@@ -22,6 +22,10 @@ Bootstrap was made to not only look and behave great in the latest desktop brows
 ### Packed with features.
 A 12-column responsive grid, dozens of components, javascript plugins, typography, form controls, and even a web-based Customizer to make Bootstrap your own.
 
+## Built with Bootstrap
+![kippt](../static/img/media/kippt.png)
+![fleetio](../static/img/media/fleetio.png)
+
 ## 1. Download
 Before downloading, be sure to have a code editor (we recommend Sublime Text 2) and some working knowledge of HTML and CSS. We won't walk through the source files here, but they are available for download. We'll focus on getting started with our the compiled Bootstrap files.
 
