@@ -6,7 +6,7 @@
             
                 {% for link in site.navigation %}
                     <li class="{{ link.text | downcase }} {% if forloop.first %}first{% endif %}{% if page.url == link.url %} active{% endif %}{% if forloop.last %} last{% endif %}">
-                        <a href="{{ site.BASE_PATH }}#{{ link.url }}" data-scrollto="{{ link.url }}"><span>{{ link.text }}</span></a>
+                        <a href="{{ site.baseurl }}/#{{ link.url }}" data-scrollto="{{ link.url }}"><span>{{ link.text }}</span></a>
                     </li>
                 {% endfor %}
 
@@ -14,7 +14,7 @@
                 
                 {% for link in site.navigation %}
                     <li class="{{ link.text | downcase }} {% if forloop.first %}first{% endif %}{% if link.text == 'Blog' %} active{% endif %}{% if forloop.last %} last{% endif %}">
-                        <a href="{{ site.BASE_PATH }}#{{ link.url }}" data-scrollto="{{ link.url }}"><span>{{ link.text }}</span></a>
+                        <a href="{{ site.baseurl }}/#{{ link.url }}" data-scrollto="{{ link.url }}"><span>{{ link.text }}</span></a>
                     </li>
                 {% endfor %}
 

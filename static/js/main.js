@@ -2,8 +2,10 @@ $(document).ready(function() {
 
     /*
     * set home op active bij eerste page load
+    * FIXME: window.location gedoe is een lelijke hack 
+    * TODO: als je naar een blog pagina gaat moet de pagina omhoogscrollen zodat de header uit beeld is en het menu boven tegen de pagina staat
     */
-    if (window.location.pathname === '/geografisch/') {
+    if (window.location.pathname === '/geografisch/' || window.location.pathname === '/geografisch/index.html') {
         $('li.home').addClass('active');    
     };
     
