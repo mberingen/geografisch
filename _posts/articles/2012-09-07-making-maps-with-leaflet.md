@@ -15,6 +15,9 @@ Leaflet is a modern open-source JavaScript library for mobile-friendly interacti
 
 Leaflet is built from the ground up to work efficiently on both desktop and mobile platforms like iOS and Android, taking advantage of HTML5 and CSS3 on modern browsers. The focus is on usability, performance, small size, A-grade browser support and a simple API with convention over configuration. The OOP-based code of the library is designed to be modular, extensible and very easy to understand.
 
+
+![leaflet map](../static/img/media/leaflet-map.png)
+
 Most people seem to think maps on the internet consist entirely of a Google Map with some markers on it. Leaflet provides an easy to use alternative that is capable of doing much more.
 
 Let's start with a simple example and build from there.
@@ -65,7 +68,5 @@ Next we’ll add a tile layer to add to our map, in this case it’s a CloudMade
     }).addTo(map);
     
 Make sure all the code is called after the div and leaflet.js inclusion. That’s it! You have a working Leaflet map now.
-
-![leaflet map](../static/img/media/leaflet-map.png)
 
 It’s worth noting that Leaflet is provider-agnostic, meaning that it doesn’t enforce a particular choice of providers for tiles, and it doesn’t even contain a single provider-specific line of code, so you’re free to use other providers if you need to (we’d recommend CloudMade though, it looks beautiful).
