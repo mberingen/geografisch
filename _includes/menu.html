@@ -1,7 +1,8 @@
 <nav id="main-menu">
     <div class="container">
         <ul>
-            {% if page.layout == 'single-page' %}
+            {% case page.layout %}
+            {% when 'single-page' %}
             
                 {% for link in site.navigation %}
                     <li class="{{ link.text | downcase }} {% if forloop.first %}first{% endif %}{% if page.url == link.url %} active{% endif %}{% if forloop.last %} last{% endif %}">
@@ -9,7 +10,7 @@
                     </li>
                 {% endfor %}
 
-            {% elsif page.layout == 'blog-post' %}
+            {% when 'blog-post' %}
                 
                 {% for link in site.navigation %}
                     <li class="{{ link.text | downcase }} {% if forloop.first %}first{% endif %}{% if link.text == 'Blog' %} active{% endif %}{% if forloop.last %} last{% endif %}">
@@ -17,7 +18,7 @@
                     </li>
                 {% endfor %}
 
-            {% endif %}
+            {% endcase %}
         </ul>
     </div>
 </nav>

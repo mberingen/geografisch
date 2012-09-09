@@ -90,6 +90,7 @@ nav#main-menu.fixed {
 
 .thumbnails {
     @include clearfix;
+    margin: 0; padding: 0;
     
     li {
         float: left;
@@ -103,6 +104,7 @@ nav#main-menu.fixed {
         border: 1px solid #AAA;
         @include border-radius(3px);
         float: left;
+        width: 149px; height: 149px;
     }
 
     img:hover {
@@ -112,8 +114,9 @@ nav#main-menu.fixed {
     }
 
     p {
-        margin-left: 10px;
+        margin: 0 0 0 10px;
         float: left;
+        @include span-columns(7);
     }
 }
 
