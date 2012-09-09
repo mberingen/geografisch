@@ -2,8 +2,8 @@
 layout: article
 title: Introducing Prose Bootstrap
 abstract: Prose Bootstrap is a minimal template intended to get you started with Jekyll.
-author_twitter: _mql
-author: Michael Aufreiter
+author_twitter: _geo_grafisch
+author: Marc Beringen
 categories:
 - articles
 published: true
@@ -29,3 +29,5 @@ If your page lives under `http://username.github.com/sitename` your config.yml l
 # Use Prose
 
 Once your site is up you can start managing it with [Prose](http://prose.io). Follow the instructions [here](http://prose.io/help/getting-started.html).
+
+![prose](http://www.maxmasnick.com/media/2012-07-03-prose/prose.png)
