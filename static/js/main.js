@@ -3,7 +3,10 @@ $(document).ready(function() {
     /*
     * set home op active bij eerste page load
     */
-    $('li.home').addClass('active');
+    if (window.location.pathname === '/geografisch/') {
+        $('li.home').addClass('active');    
+    };
+    
 
     /*
     * Sticky menu: set menu class fixed als user voorbij de header scrollt

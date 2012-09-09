@@ -1,62 +1,7 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-
-    <title>Geo-Grafisch &middot; Home</title>
-    <link rel='shortcut icon' href="/geografisch/static/img/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="/geografisch/static/css/normalize.css">
-    <link rel="stylesheet" href="/geografisch/static/fonts/open-sans.css">
-    <link rel="stylesheet" href="/geografisch/static/css/main.css">
-
-    
-
-</head>
-<body>
-    <section id="intro">
-        <div class="container">
-            <header>
-                <div class="header-map"></div>
-                <div class="logo"></div>
-            </header>
-        </div>
-    </section>
-
-<nav id="main-menu">
-    <div class="container">
-        <ul>
-            
-            
-                
-                    <li class="home first">
-                        <a href="http://127.0.0.1:4000/geografisch/#home" data-scrollto="home"><span>Home</span></a>
-                    </li>
-                
-                    <li class="portfolio ">
-                        <a href="http://127.0.0.1:4000/geografisch/#portfolio" data-scrollto="portfolio"><span>Portfolio</span></a>
-                    </li>
-                
-                    <li class="blog ">
-                        <a href="http://127.0.0.1:4000/geografisch/#blog" data-scrollto="blog"><span>Blog</span></a>
-                    </li>
-                
-                    <li class="contact  last">
-                        <a href="http://127.0.0.1:4000/geografisch/#contact" data-scrollto="contact"><span>Contact</span></a>
-                    </li>
-                
-
-            
-        </ul>
-    </div>
-</nav>
-
+---
+layout: single-page
+title: Home
+---
 
 <section id="home">
     <div class="container">
@@ -95,35 +40,14 @@
         <h1>Blog</h1>
 
         <div class="article-navigation">
-            
+            {% for item in site.categories.articles limit:40 offset:0 %}
             <ul>
                 <li>
-                    <a class="article-link" href="/geografisch/articles/up-and-running-with-tilestache.html" title="Up and running with TileStache">Up and running with TileStache</a>
+                    <a class="article-link" href="{{site.baseurl}}{{item.url}}" title="{{item.title}}">{{item.title}}</a>
                 </li>
-                <p>This article describes how to get started with TileStache</p>
+                <p>{{ item.abstract }}</p>
             </ul>
-            
-            <ul>
-                <li>
-                    <a class="article-link" href="/geografisch/articles/making-maps-with-leaflet.html" title="Making maps with Leaflet">Making maps with Leaflet</a>
-                </li>
-                <p>How to make a simple but beautiful map with Leaflet</p>
-            </ul>
-            
-            <ul>
-                <li>
-                    <a class="article-link" href="/geografisch/articles/twitter_bootstrap.html" title="Twitter Bootstrap">Twitter Bootstrap</a>
-                </li>
-                <p>Using twitter bootstrap</p>
-            </ul>
-            
-            <ul>
-                <li>
-                    <a class="article-link" href="/geografisch/articles/prose-bootstrap.html" title="Introducing Prose Bootstrap">Introducing Prose Bootstrap</a>
-                </li>
-                <p>Prose Bootstrap is a minimal template intended to get you started with Jekyll.</p>
-            </ul>
-            
+            {% endfor %}
         </div>
         <p>Excepteur inventore quod do maecenas laoreet posuere maiores? Vero iusto saepe adipiscing nostra netus ornare, mus quas, corporis enim! Consectetuer maxime sodales, laboriosam nascetur natus quaerat? Possimus quas, cupiditate commodi! A nostra a fuga, doloremque nihil. Voluptatum deleniti veritatis repellat, necessitatibus laborum, mattis hic recusandae conubia integer enim, rutrum earum.</p>
         <p>Pariatur dolor? Do mauris magnis ad nisl quisque? Vitae euismod, aliquip fugit, facere saepe magnam sagittis class habitasse, urna expedita natus id egestas nostra? Cum aptent, totam, repellat, voluptatibus per repellendus risus fames tincidunt phasellus sapiente? Vestibulum nullam odio elementum. Dolores minus cursus magnam arcu ipsa aut leo ultrices platea.</p>
@@ -162,43 +86,3 @@
         </div>  
     </div>
 </section>
-
-
-    <footer>
-        <div class="container">
-            <ul>
-                <li><a href="#">Faucibus</a></li>
-                <li><a href="#">Faucibus</a></li>
-                <li><a href="#">Faucibus</a></li>
-                <li><a href="#">Faucibus</a></li>
-            </ul>
-        </div>
-    </footer>
-
-
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
-<script src="/geografisch/static/js/vendor/modernizr-2.6.1.min.js"></script>
-<!--<script src="/geografisch/static/js/vendor/jquery.stellar.js"></script>-->
-<script src="/geografisch/static/js/vendor/jquery.scrollto.js"></script>
-<script src="/geografisch/static/js/vendor/jquery.waypoints.min.js"></script>
-<script src="/geografisch/static/js/plugins.js"></script>
-<script src="/geografisch/static/js/main.js"></script>
-
-    
-
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-<!--
-<script>
-    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(g,s)}(document,'script'));
-</script>
--->
-
-
-
-</body>
-</html>

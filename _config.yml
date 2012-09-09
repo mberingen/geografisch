@@ -2,10 +2,12 @@ auto: true
 server: true
 permalink: none
 baseurl: "/geografisch"
-staticurl: "/geografisch/static"
 exclude:
 - .gitignore
 - README.md
+
+BASE_PATH: "http://127.0.0.1:4000/geografisch/"
+STATIC_URL: "/geografisch/static"
 
 navigation:
 - text: Home
