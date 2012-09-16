@@ -28,52 +28,30 @@ $(document).ready(function() {
 
     /*
     * Waypoints voor active menu items
-    * TODO: needs cleanup
     */
-    $('#home').waypoint(function(e, direction) {
-        if (direction === 'down') {
-            $('li.portfolio').removeClass('active');
-            $('li.home').addClass('active');
-        }
-    }, {
-            offset: 10
-    });
+    var menu_list_items = $('#main-menu li');
+    menu_list_items.each(function(index, value) {
+        // haal de section ids uit het data-attribute in het menu
+        var section_id = '#' + $(this).children(1).data('scrollto')
+        var section = $(section_id)
 
-    $('#portfolio').waypoint(function(e, direction) {
-        if (direction === 'down') {
-            $('li.home').removeClass('active');
-            $('li.portfolio').addClass('active');
-        } else {
-            $('li.home').addClass('active');
-            $('li.portfolio').removeClass('active');
-        }                    
-    }, {
-            offset: 10
-    });
-
-    $('#blog').waypoint(function(e, direction) {
-        if (direction === 'down') {
-            $('li.portfolio').removeClass('active');
-            $('li.blog').addClass('active');
-        } else {
-            $('li.portfolio').addClass('active');
-            $('li.blog').removeClass('active');
-        }                    
-    }, {
-            offset: 10
+        section.waypoint(function(e, direction) {
+            if (direction === 'down') {
+                $(value).prev().removeClass('active')
+                $(value).addClass('active')
+            }
+            else {
+                $(value).prev().addClass('active')
+                if (index > 0) {
+                    // als je voorbij 'home' scrollt moet de 'active'-class blijven staan
+                    $(value).removeClass('active')
+                }
+            };
+        }, {
+            offset: 50
+        });
     });
     
-    $('#contact').waypoint(function(e, direction) {
-        if (direction === 'down') {
-            $('li.blog').removeClass('active');
-            $('li.contact').addClass('active');
-        } else {
-            $('li.blog').addClass('active');
-            $('li.contact').removeClass('active');
-        }                    
-    }, {
-            offset: 10
-    });
 
     /*
     * Scrolling: gebruik scrollTo library voor smooth scroll naar sections
