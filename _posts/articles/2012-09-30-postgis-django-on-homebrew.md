@@ -41,3 +41,6 @@ I'm not sure what uuid-ossp does, but I haven't noticed any problems without it.
 
 Now edit /usr/local/Library/Taps/homebrew-versions/postgis15.rb 
 
+    line 12: depends_on 'postgresql9'
+    
+    line 30: postgresql = Formula.factory 'postgresql9'
