@@ -30,7 +30,7 @@ Next up, attempting to install Postgresql9 with:
 
     brew install postgresql9
     
-For me this failed with an uuid-ossp error. Trying 'brew link ossp-uuid' or 'brew unlink ossp-uuid && brew link ossp-uuid' didn't work for me
+For me this failed with an uuid-ossp error. Trying [some of the](https://github.com/mxcl/homebrew/issues/10315) [suggestions](https://gist.github.com/3188632) online like 'brew link ossp-uuid' or 'brew unlink ossp-uuid && brew link ossp-uuid' didn't work for me
 
 The trick seems to be that you can ignore this by install with the -dv paramater:
 
