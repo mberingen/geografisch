@@ -38,3 +38,6 @@ The trick seems to be that you can ignore this by install with the -dv paramater
     
 Where the installation hangs, just type 'exit' ad it will continue with the installation without uuid-ossp
 I'm not sure what uuid-ossp does, but I haven't noticed any problems without it. Yet!
+
+Now edit /usr/local/Library/Taps/homebrew-versions/postgis15.rb 
+
