@@ -30,7 +30,7 @@ Next up, attempting to install Postgresql9 with:
 
     brew install postgresql9
     
-For me this failed with an uuid-ossp error. 
+For me this failed with an uuid-ossp error. Trying 'brew link ossp-uuid' or 'brew unlink ossp-uuid && brew link ossp-uuid' didn't work for me
 
 The trick seems to be that you can ignore this by install with the -dv paramater:
 
@@ -44,3 +44,5 @@ Now edit /usr/local/Library/Taps/homebrew-versions/postgis15.rb
     line 12: depends_on 'postgresql9'
     
     line 30: postgresql = Formula.factory 'postgresql9'
+    
+and use brew install postgis15 and keep your fingers crossed
