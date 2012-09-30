@@ -2,12 +2,12 @@ $(document).ready(function() {
 
     /*
     * set home op active bij eerste page load
-    * FIXME: window.location gedoe is een lelijke hack 
+    * FIXME: window.location gedoe is een lelijke hack
     * TODO: als je naar een blog pagina gaat moet de pagina omhoogscrollen zodat de header uit beeld is en het menu boven tegen de pagina staat
     */
     if (window.location.pathname === '/geografisch/' || window.location.pathname === '/geografisch/index.html') {
-        $('li.home').addClass('active');    
-    };
+        $('li.home').addClass('active');
+    }
     
 
     /*
@@ -32,21 +32,21 @@ $(document).ready(function() {
     var menu_list_items = $('#main-menu li');
     menu_list_items.each(function(index, value) {
         // haal de section ids uit het data-attribute in het menu
-        var section_id = '#' + $(this).children(1).data('scrollto')
-        var section = $(section_id)
+        var section_id = '#' + $(this).children(1).data('scrollto');
+        var section = $(section_id);
 
         section.waypoint(function(e, direction) {
             if (direction === 'down') {
-                $(value).prev().removeClass('active')
-                $(value).addClass('active')
+                $(value).prev().removeClass('active');
+                $(value).addClass('active');
             }
             else {
-                $(value).prev().addClass('active')
+                $(value).prev().addClass('active');
                 if (index > 0) {
                     // als je voorbij 'home' scrollt moet de 'active'-class blijven staan
-                    $(value).removeClass('active')
+                    $(value).removeClass('active');
                 }
-            };
+            }
         }, {
             offset: 50
         });
