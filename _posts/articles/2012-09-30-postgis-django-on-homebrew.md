@@ -46,3 +46,4 @@ Now edit /usr/local/Library/Taps/homebrew-versions/postgis15.rb
     line 30: postgresql = Formula.factory 'postgresql9'
     
 and use brew install postgis15 and keep your fingers crossed
+
