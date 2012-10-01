@@ -47,3 +47,6 @@ Now edit /usr/local/Library/Taps/homebrew-versions/postgis15.rb
     
 and use brew install postgis15 and keep your fingers crossed
 
+restore your backups with: 
+
+    sh /usr/local/Cellar/postgis15/1.5.3/bin/postgis_restore.pl /usr/local/Cellar/postgis15/1.5.3/share/postgis/postgis.sql poibox "Location/of/your/backup.backup" -E=UNICODE > restore.log
