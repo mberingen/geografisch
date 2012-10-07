@@ -2,7 +2,7 @@
     <div class="container">
         <ul>
             {% case page.layout %}
-            {% when 'single-page' %}
+            {% when 'single_page_layout' %}
             
                 {% for link in site.navigation %}
                     <li class="{{ link.text | downcase }} {% if forloop.first %}first{% endif %}{% if page.url == link.url %} active{% endif %}{% if forloop.last %} last{% endif %}">

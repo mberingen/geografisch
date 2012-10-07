@@ -1,0 +1,25 @@
+---
+title: Blog
+author: Marc Beringen
+categories:
+- pages
+published: true
+---
+
+<section id="blog">
+    <div class="container">
+        <h1>Blog</h1>
+
+        <div class="article-navigation">
+            {% for item in site.categories.articles limit:40 offset:0 %}
+            <ul>
+                <li>
+                    <a class="article-link" href="{{site.baseurl}}{{item.url}}" title="{{item.title}}">{{item.title}}</a>
+                </li>
+                <p>{{ item.abstract }}</p>
+            </ul>
+            {% endfor %}
+        </div>
+        <p>Excepteur inventore quod do maecenas laoreet posuere maiores? Vero iusto saepe adipiscing nostra netus ornare, mus quas, corporis enim! Consectetuer maxime sodales, laboriosam nascetur natus quaerat? Possimus quas, cupiditate commodi! A nostra a fuga, doloremque nihil. Voluptatum deleniti veritatis repellat, necessitatibus laborum, mattis hic recusandae conubia integer enim, rutrum earum.</p>
+    </div>
+</section>
